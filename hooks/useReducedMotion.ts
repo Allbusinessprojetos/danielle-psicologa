@@ -12,6 +12,9 @@ export function useReducedMotion(): boolean {
 
   useEffect(() => {
     const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // Reading matchMedia on mount is the correct way to sync from this
+    // SSR-unavailable browser API—not a cascading-render pattern.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setReduced(query.matches);
 
     const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
