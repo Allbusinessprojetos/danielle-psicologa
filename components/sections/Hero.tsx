@@ -2,7 +2,6 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 import { whatsappHref } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/Button";
-import { FloralAccent } from "@/components/ui/FloralAccent";
 
 export function Hero() {
   const { hero, profissional, ctas } = siteConfig;
@@ -19,6 +18,7 @@ export function Hero() {
           alt={hero.imagemAlt}
           fill
           priority
+          quality={92}
           sizes="100vw"
           className="object-cover object-[72%_center] lg:object-right"
         />
@@ -28,8 +28,6 @@ export function Hero() {
           className="absolute inset-0 hidden bg-gradient-to-r from-blush via-blush/85 via-40% to-transparent lg:block"
         />
       </div>
-
-      <FloralAccent className="-left-16 bottom-0 w-72 text-rose/20 lg:left-auto lg:right-10 lg:top-24 lg:w-96" />
 
       <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-10 lg:flex lg:min-h-[92vh] lg:items-center lg:px-8 lg:pb-0 lg:pt-0">
         <div className="max-w-xl lg:pt-24">
