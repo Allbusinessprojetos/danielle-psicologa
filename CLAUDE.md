@@ -141,4 +141,39 @@ _Registrar no formato "o que aconteceu → o que eu aprendi/mudo a partir de
 agora". É a parte mais valiosa deste documento — evita repetir o mesmo erro
 em rodadas futuras._
 
-_(vazio por enquanto)_
+- O rosa `#C9527A` da referência reprova AA em texto normal (4.22:1) → toda
+  paleta nova passa por verificação de contraste calculada antes de virar
+  token, e cores de marca ganham uma variante escura para texto
+  (`rose-deep`).
+- A arte gerada por IA trazia uma foto de poltrona que não existia no
+  material real → conferir quais imagens da referência existem de fato antes
+  de desenhar seções que dependem delas.
+- Classes de opacidade sobre cinza (`text-charcoal/45`, `text-charcoal/60`)
+  pareciam visualmente OK mas reprovavam contraste AA (2.63:1 e 3.96:1) em
+  texto pequeno no rodapé e em estados "fechado" — o Lighthouse só pegou
+  parte das ocorrências numa única passada → verificação de contraste vale
+  para qualquer variante derivada por opacidade, não só para a cor de marca
+  em hex cheio. `text-charcoal/70` (≈5.3:1) é o piso seguro para texto
+  secundário sobre fundo branco; abaixo disso, calcular antes de usar.
+- Uma seção sem título visível (bloco de credenciais, ícones em grid) ainda
+  precisa manter a ordem semântica de headings sequencial — usar `h3` direto
+  ali pulava do `h1` do hero pro `h3` sem passar por `h2`, reprovando o
+  audit de heading-order do Lighthouse → toda seção que não usa
+  `SectionTitle` (h2) precisa promover o heading do item para o nível
+  correto (h2 nesse caso) em vez de assumir h3 "porque é conteúdo de card".
+- GSAP ScrollTrigger revela seções conforme o scroll real dispara; um
+  screenshot "full page" do Playwright não dispara esses scroll events e
+  mostra a página com blocos inteiros em branco (opacity:0 inicial), dando
+  falsa impressão de bug → para inspecionar visualmente seções com reveal
+  scroll-linked, rolar de verdade em incrementos (`window.scrollTo` em loop)
+  antes de tirar o screenshot, não confiar no modo fullPage direto.
+- Depois de várias edições, um dev server (Turbopack) de longa duração às
+  vezes mantém no console erros de SSR antigos (ex.: `ReferenceError` de um
+  ícone que já não é mais importado no arquivo atual) mesmo com o código-
+  fonte já corrigido → antes de tratar um erro de console como bug real na
+  verificação final, reiniciar o dev server limpo (matar processo + apagar
+  `.next/`) e reproduzir.
+- No Windows, o `lighthouse` CLI às vezes lança `EPERM` ao tentar limpar a
+  pasta temp do Chrome no fim da execução, mesmo com o relatório já escrito
+  com sucesso → checar se o arquivo de output existe em vez de confiar no
+  código de saída/últimas linhas do log antes de assumir que a run falhou.
