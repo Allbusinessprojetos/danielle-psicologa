@@ -1176,7 +1176,7 @@ export function Header() {
 Crie `components/layout/Footer.tsx`:
 
 ```tsx
-import { Instagram, Mail } from "lucide-react";
+import { AtSign, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { whatsappHref } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/Button";
@@ -1252,7 +1252,7 @@ export function Footer() {
             aria-label={`Instagram ${contato.instagramHandle}`}
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-rose/40 text-rose transition-colors hover:bg-blush"
           >
-            <Instagram className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+            <AtSign className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
           </a>
         </div>
       </div>
