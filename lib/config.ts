@@ -166,7 +166,12 @@ const siteConfigBase = {
   secoes: {
     credenciais: { titulo: "Credenciais e experiência" },
     especialidades: { titulo: "Especialidades" },
-    paraQuem: { titulo: "Para quem é a psicoterapia?" },
+    paraQuem: {
+      titulo: "Para quem é a psicoterapia?",
+      imagem: "/images/consultorio.webp",
+      imagemAlt:
+        "Sala de atendimento acolhedora da Dani Psicologia Clínica, com poltrona bordô, tapete e decoração floral",
+    },
     depoimentos: {
       titulo: "O que dizem sobre o meu trabalho",
       selo: "avaliação do Google",
