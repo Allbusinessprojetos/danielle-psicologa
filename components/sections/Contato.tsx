@@ -113,7 +113,7 @@ export function Contato() {
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-rose-deep"
                 >
-                  Agenda online
+                  {contato.agendaOnlineLabel}
                 </a>
               </li>
             </ul>
