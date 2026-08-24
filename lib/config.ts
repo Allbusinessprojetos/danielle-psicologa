@@ -24,9 +24,7 @@ export const siteConfig = {
   },
 
   contato: {
-    // PENDENTE: preencher com o número em formato internacional, só dígitos.
-    // Exemplo: "5517999999999". Enquanto vazio, os CTAs caem no maapp.
-    whatsapp: "",
+    whatsapp: "5517997731505",
     mensagemWhatsapp:
       "Olá, Danielle! Vim pelo site e gostaria de agendar uma consulta.",
     email: "daniellerevitalle@gmail.com",
