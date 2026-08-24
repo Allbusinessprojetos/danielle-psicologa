@@ -22,7 +22,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-charcoal/60">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-charcoal/70">
             {footer.navegacaoLabel}
           </p>
           <ul className="mt-4 space-y-2">
@@ -40,7 +40,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-charcoal/60">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-charcoal/70">
             {footer.contatoLabel}
           </p>
           <address className="mt-4 space-y-2 text-sm not-italic text-charcoal/80">
@@ -80,7 +80,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-rose/15">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-charcoal/60 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-charcoal/70 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <p>
             © {ano} {profissional.marca}. Todos os direitos reservados.
           </p>

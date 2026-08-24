@@ -68,7 +68,7 @@ export function Contato() {
                   <dt className="text-charcoal/75">{item.dia}</dt>
                   <dd
                     className={
-                      item.aberto ? "text-charcoal" : "text-charcoal/45"
+                      item.aberto ? "text-charcoal" : "text-charcoal/70"
                     }
                   >
                     {item.situacao}

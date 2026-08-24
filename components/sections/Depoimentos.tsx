@@ -49,7 +49,7 @@ export function Depoimentos() {
                     />
                   ))}
                 </span>
-                <span className="text-xs text-charcoal/60">
+                <span className="text-xs text-charcoal/70">
                   {item.autor} — {siteConfig.secoes.depoimentos.selo}
                 </span>
               </div>

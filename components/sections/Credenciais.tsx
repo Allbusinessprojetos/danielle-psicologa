@@ -12,9 +12,9 @@ export function Credenciais() {
         {siteConfig.credenciais.map((item) => (
           <div key={item.titulo} className="flex flex-col items-start gap-4">
             <IconCircle name={item.icone} />
-            <h3 className="font-display text-xl leading-snug text-charcoal">
+            <h2 className="font-display text-xl leading-snug text-charcoal">
               {item.titulo}
-            </h3>
+            </h2>
             <p className="text-sm leading-relaxed text-charcoal/75">
               {item.descricao}
             </p>

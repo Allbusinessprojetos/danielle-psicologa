@@ -102,6 +102,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/danipsicologiaclinica",
     instagramHandle: "@danipsicologiaclinica",
     agendaOnline: "https://maapp.com.br/PsicoDani",
+    agendaOnlineLabel: "Agenda online",
   },
 
   endereco: {
@@ -1815,7 +1816,7 @@ export function Contato() {
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-rose-deep"
                 >
-                  Agenda online
+                  {contato.agendaOnlineLabel}
                 </a>
               </li>
             </ul>

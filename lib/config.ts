@@ -18,7 +18,7 @@ export const siteConfig = {
     tituloResto: "acolhimento, experiência e base científica.",
     subtitulo:
       "Um espaço seguro, ético e humanizado para quem deseja compreender suas emoções, fortalecer vínculos e construir mudanças reais.",
-    imagem: "/images/danielle-hero.png",
+    imagem: "/images/danielle-hero.webp",
     imagemAlt:
       "Danielle Saquetto Baruffi, psicóloga, sentada em uma poltrona no consultório segurando uma prancheta",
   },
