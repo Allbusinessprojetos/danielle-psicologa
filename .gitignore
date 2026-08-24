@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Material de referência do cliente (pesado, não versionar)
 referencia lp/
+
+# Claude Code session files (machine/session-specific, not part of the project)
+.claude/
