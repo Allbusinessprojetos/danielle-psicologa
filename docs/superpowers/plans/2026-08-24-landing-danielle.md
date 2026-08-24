@@ -2152,7 +2152,8 @@ Abra `CLAUDE.md` e preencha a seção "Aprendizados" com o que esta rodada ensin
 
 ## Pendências que bloqueiam a publicação
 
-1. **Número de WhatsApp da Danielle** — preencher `siteConfig.contato.whatsapp` com o formato internacional só de dígitos. Enquanto vazio, os CTAs caem no maapp.
+1. ~~Número de WhatsApp da Danielle~~ — **resolvido** (`5517997731505` em `siteConfig.contato.whatsapp`, commit `d7ed30d`).
 2. **Confirmação ética da seção de depoimentos** com o CRP dela (ver §7 da spec).
-3. **Domínio final** — atualizar `siteConfig.seo.url`.
-4. **Quarta avaliação do Google** — só entra quando o nome do autor for confirmado.
+3. **Domínio final** — atualizar `siteConfig.seo.url` (hoje é placeholder; nada quebra tecnicamente, mas o OG image e o canonical vão apontar pro lugar errado até isso ser trocado).
+4. **Quarta avaliação do Google** — só entra quando o nome do autor for confirmado (decisão do cliente: não inventar atribuição).
+5. **Favicon** — ainda é o padrão do create-next-app. Precisa de um asset de marca real da Danielle (não é algo pra um agente inventar sozinho).
