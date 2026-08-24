@@ -6,6 +6,7 @@ import { Depoimentos } from "@/components/sections/Depoimentos";
 import { Especialidades } from "@/components/sections/Especialidades";
 import { Hero } from "@/components/sections/Hero";
 import { ParaQuem } from "@/components/sections/ParaQuem";
+import { siteConfig } from "@/lib/config";
 
 export default function Home() {
   return (
@@ -16,9 +17,8 @@ export default function Home() {
         <Credenciais />
         <Especialidades />
         <ParaQuem />
-        {/* Seção de depoimentos: pendente de confirmação ética com o CRP.
-            Para remover do ar, basta comentar a linha abaixo. */}
-        <Depoimentos />
+        {/* Depoimentos: pendente de confirmação ética com o CRP; controlado por siteConfig.secoes.depoimentos.ativo. */}
+        {siteConfig.secoes.depoimentos.ativo && <Depoimentos />}
         <Contato />
       </main>
       <Footer />

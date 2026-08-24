@@ -10,7 +10,7 @@ export function JsonLd() {
     description: seo.descricao,
     url: seo.url,
     email: contato.email,
-    image: `${seo.url}/images/danielle-hero.png`,
+    image: `${seo.url}${seo.ogImage}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: endereco.logradouro,

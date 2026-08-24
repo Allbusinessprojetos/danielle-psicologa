@@ -1,7 +1,9 @@
+import clsx from "clsx";
 import { CalendarClock, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { whatsappHref } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 import { FloralAccent } from "@/components/ui/FloralAccent";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -9,12 +11,18 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 export function Contato() {
   const { endereco, contato, horarios, ctas } = siteConfig;
   const textos = siteConfig.secoes.contato;
+  // Quando Depoimentos está desligada, o fundo vira branco para manter a
+  // alternância de cores contra o rosa de "Para quem é" logo acima.
+  const depoimentosAtivo = siteConfig.secoes.depoimentos.ativo;
 
   return (
     <section
       id="contato"
       aria-labelledby="titulo-contato"
-      className="relative overflow-hidden bg-blush py-20 lg:py-24"
+      className={clsx(
+        "relative overflow-hidden py-20 lg:py-24",
+        depoimentosAtivo ? "bg-blush" : "bg-white",
+      )}
     >
       <FloralAccent className="-left-24 top-8 w-80 text-rose/20" />
 
@@ -32,7 +40,7 @@ export function Contato() {
         </Reveal>
 
         <Reveal stagger className="mt-16 grid gap-8 lg:grid-cols-3">
-          <div className="rounded-3xl bg-white p-8">
+          <Card>
             <MapPin
               className="h-6 w-6 text-rose"
               strokeWidth={1.5}
@@ -51,9 +59,9 @@ export function Contato() {
               </p>
               <p className="pt-1 text-rose-deep">{endereco.modalidades}</p>
             </address>
-          </div>
+          </Card>
 
-          <div className="rounded-3xl bg-white p-8">
+          <Card>
             <CalendarClock
               className="h-6 w-6 text-rose"
               strokeWidth={1.5}
@@ -76,9 +84,9 @@ export function Contato() {
                 </div>
               ))}
             </dl>
-          </div>
+          </Card>
 
-          <div className="rounded-3xl bg-white p-8">
+          <Card>
             <Mail
               className="h-6 w-6 text-rose"
               strokeWidth={1.5}
@@ -117,7 +125,7 @@ export function Contato() {
                 </a>
               </li>
             </ul>
-          </div>
+          </Card>
         </Reveal>
       </div>
     </section>

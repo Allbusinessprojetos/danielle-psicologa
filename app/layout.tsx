@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     description: siteConfig.seo.descricao,
     images: [
       {
-        url: "/images/danielle-hero.png",
-        width: 1656,
-        height: 944,
+        url: siteConfig.seo.ogImage,
+        width: 1200,
+        height: 630,
         alt: siteConfig.hero.imagemAlt,
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.seo.titulo,
     description: siteConfig.seo.descricao,
-    images: ["/images/danielle-hero.png"],
+    images: [siteConfig.seo.ogImage],
   },
   robots: { index: true, follow: true },
 };

@@ -1,4 +1,4 @@
-export const siteConfig = {
+const siteConfigBase = {
   profissional: {
     nome: "Danielle Saquetto Baruffi",
     titulo: "Psicóloga",
@@ -164,11 +164,14 @@ export const siteConfig = {
   },
 
   secoes: {
+    credenciais: { titulo: "Credenciais e experiência" },
     especialidades: { titulo: "Especialidades" },
     paraQuem: { titulo: "Para quem é a psicoterapia?" },
     depoimentos: {
       titulo: "O que dizem sobre o meu trabalho",
       selo: "avaliação do Google",
+      // Pendente de confirmação ética com o CRP sobre uso de depoimentos.
+      ativo: true,
     },
     contato: {
       titulo: "Vamos conversar?",
@@ -186,22 +189,30 @@ export const siteConfig = {
     contatoLabel: "Contato",
   },
 
-  navegacao: [
-    { label: "Início", href: "#inicio" },
-    { label: "Sobre", href: "#credenciais" },
-    { label: "Especialidades", href: "#especialidades" },
-    { label: "Atendimento", href: "#para-quem" },
-    { label: "Depoimentos", href: "#depoimentos" },
-    { label: "Contato", href: "#contato" },
-  ],
-
   seo: {
     url: "https://danipsicologiaclinica.com.br",
     titulo:
       "Danielle Saquetto Baruffi — Psicóloga em Jales/SP | CRP 06/83220",
     descricao:
       "Psicoterapia com acolhimento, experiência e base científica. Atendimento em TCC para adolescentes, adultos, casais e famílias em Jales/SP, presencial e online.",
+    ogImage: "/images/danielle-og.jpg",
   },
+} as const;
+
+const navegacaoBase = [
+  { label: "Início", href: "#inicio" },
+  { label: "Sobre", href: "#credenciais" },
+  { label: "Especialidades", href: "#especialidades" },
+  { label: "Atendimento", href: "#para-quem" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Contato", href: "#contato" },
+] as const;
+
+export const siteConfig = {
+  ...siteConfigBase,
+  navegacao: siteConfigBase.secoes.depoimentos.ativo
+    ? navegacaoBase
+    : navegacaoBase.filter((item) => item.href !== "#depoimentos"),
 } as const;
 
 export type SiteConfig = typeof siteConfig;

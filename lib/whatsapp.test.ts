@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildWhatsAppLink } from "./whatsapp";
+import { buildWhatsAppLink, whatsappHref } from "./whatsapp";
 
 const FALLBACK = "https://maapp.com.br/PsicoDani";
 
@@ -31,5 +31,9 @@ describe("buildWhatsAppLink", () => {
 
   it("retorna o fallback quando o número não tem nenhum dígito", () => {
     expect(buildWhatsAppLink("(  ) -", "Olá", FALLBACK)).toBe(FALLBACK);
+  });
+
+  it("usa o número configurado, não o fallback", () => {
+    expect(whatsappHref()).toMatch(/^https:\/\/wa\.me\/\d{12,13}\?text=/);
   });
 });
