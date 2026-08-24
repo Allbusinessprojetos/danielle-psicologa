@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/image";
 import { CalendarClock, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { whatsappHref } from "@/lib/whatsapp";
@@ -27,8 +28,19 @@ export function Contato() {
       <FloralAccent className="-left-24 top-8 w-80 text-rose/20" />
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-        <Reveal>
-          <SectionTitle id="titulo-contato">{textos.titulo}</SectionTitle>
+        <Reveal className="flex flex-col items-center">
+          <div className="relative h-24 w-24 overflow-hidden rounded-full ring-4 ring-white shadow-[0_4px_20px_rgba(46,42,43,0.15)]">
+            <Image
+              src={textos.imagem}
+              alt={textos.imagemAlt}
+              fill
+              sizes="96px"
+              className="object-cover"
+            />
+          </div>
+          <SectionTitle id="titulo-contato" className="mt-6">
+            {textos.titulo}
+          </SectionTitle>
           <p className="mx-auto mt-5 max-w-xl text-center text-sm leading-relaxed text-charcoal/80">
             {textos.subtitulo}
           </p>

@@ -185,6 +185,8 @@ const siteConfigBase = {
       tituloLocal: "Onde atendo",
       tituloHorarios: "Horários",
       tituloCanais: "Outros canais",
+      imagem: "/images/danielle-sorriso.webp",
+      imagemAlt: "Danielle Saquetto Baruffi sorrindo",
     },
   },
 

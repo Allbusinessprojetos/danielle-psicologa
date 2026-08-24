@@ -5,17 +5,20 @@ export function SectionTitle({
   children,
   id,
   align = "center",
+  className,
 }: {
   children: ReactNode;
   id?: string;
   /** "left" é usado quando o título divide espaço com outro elemento (ex.: uma foto ao lado). */
   align?: "center" | "left";
+  className?: string;
 }) {
   return (
     <div
       className={clsx(
         "flex flex-col items-center text-center",
         align === "left" && "lg:items-start lg:text-left",
+        className,
       )}
     >
       <h2
