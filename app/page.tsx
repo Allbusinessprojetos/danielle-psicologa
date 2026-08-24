@@ -2,6 +2,8 @@ import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Credenciais } from "@/components/sections/Credenciais";
 import { Especialidades } from "@/components/sections/Especialidades";
+import { ParaQuem } from "@/components/sections/ParaQuem";
+import { Depoimentos } from "@/components/sections/Depoimentos";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
         <Hero />
         <Credenciais />
         <Especialidades />
+        <ParaQuem />
+        <Depoimentos />
       </main>
     </>
   );
