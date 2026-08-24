@@ -26,7 +26,8 @@ que funcionou), atualizamos este documento para reaproveitar da próxima vez.
   qualidade se precisar de algo além do Google Fonts.
 - **next/image** para todas as imagens (otimização automática).
 - **clsx** para classes condicionais.
-- Deploy alvo: **Vercel**.
+- Deploy alvo: **Netlify** (via `@netlify/plugin-nextjs`, configurado em
+  `netlify.toml`). Vercel também funciona sem alteração caso mude no futuro.
 
 **Fontes de componentes/inspiração de UI** (usar como referência ou para
 copiar/adaptar trechos, nunca instalar como dependência fechada):
