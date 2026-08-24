@@ -4,6 +4,7 @@ import { Credenciais } from "@/components/sections/Credenciais";
 import { Especialidades } from "@/components/sections/Especialidades";
 import { ParaQuem } from "@/components/sections/ParaQuem";
 import { Depoimentos } from "@/components/sections/Depoimentos";
+import { Contato } from "@/components/sections/Contato";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Especialidades />
         <ParaQuem />
         <Depoimentos />
+        <Contato />
       </main>
     </>
   );
