@@ -26,7 +26,9 @@ export function Hero() {
       <div className="relative mx-auto flex min-h-[100svh] max-w-[1440px] items-end px-5 pb-8 pt-24 sm:px-8 sm:pb-12 sm:pt-28 lg:items-center lg:px-12 lg:pb-0 xl:px-16">
         <div className="max-w-[690px] lg:w-[52%] lg:pt-14">
           <h1 className="hero-title mt-5 max-w-3xl font-display text-[clamp(2.65rem,12vw,4.25rem)] leading-[0.92] tracking-[-0.045em] sm:mt-7 sm:text-[clamp(3.15rem,6.8vw,7rem)] sm:leading-[0.89]">
-            <span className="block text-charcoal">{hero.tituloDestaque}</span>
+            <span className="block text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
+  {hero.tituloDestaque}
+</span>
             <span className="mt-1 block font-normal italic text-rose-deep sm:mt-2">{hero.tituloResto}</span>
           </h1>
 
