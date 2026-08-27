@@ -1,59 +1,23 @@
 import { Quote, Star } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function Depoimentos() {
   return (
-    <section
-      id="depoimentos"
-      aria-labelledby="titulo-depoimentos"
-      className="bg-white py-20 lg:py-24"
-    >
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <Reveal>
-          <SectionTitle id="titulo-depoimentos">
-            {siteConfig.secoes.depoimentos.titulo}
-          </SectionTitle>
+    <section id="depoimentos" className="bg-peach py-24 lg:py-32">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
+        <Reveal className="max-w-3xl">
+          <p className="section-eyebrow">Avaliações</p>
+          <h2 className="mt-5 font-display text-[clamp(2.7rem,5vw,5rem)] leading-[0.98] tracking-[-0.04em] text-ink">{siteConfig.secoes.depoimentos.titulo}</h2>
         </Reveal>
-
-        <Reveal
-          stagger
-          className="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-3"
-        >
+        <Reveal stagger className="mt-14 grid gap-4 md:grid-cols-3">
           {siteConfig.depoimentos.map((item) => (
-            <Card
-              key={item.autor}
-              className="min-w-[85%] snap-center sm:min-w-0"
-            >
-              <Quote
-                className="h-7 w-7 text-rose"
-                strokeWidth={1.5}
-                aria-hidden="true"
-              />
-              <p className="mt-4 font-display text-lg italic leading-relaxed text-charcoal">
-                {item.texto}
-              </p>
-              <div className="mt-5 flex items-center gap-3">
-                <span
-                  className="flex gap-0.5"
-                  role="img"
-                  aria-label={`${item.nota} de 5 estrelas`}
-                >
-                  {Array.from({ length: item.nota }).map((_, index) => (
-                    <Star
-                      key={index}
-                      className="h-4 w-4 fill-rose text-rose"
-                      aria-hidden="true"
-                    />
-                  ))}
-                </span>
-                <span className="text-xs text-charcoal/70">
-                  {item.autor} — {siteConfig.secoes.depoimentos.selo}
-                </span>
-              </div>
-            </Card>
+            <article key={item.autor} className="rounded-[1.75rem] bg-cream p-7 sm:p-9">
+              <Quote className="h-6 w-6 text-terracotta" strokeWidth={1.4} />
+              <p className="mt-8 font-display text-2xl italic leading-relaxed text-ink">“{item.texto}”</p>
+              <div className="mt-8 flex gap-0.5">{Array.from({ length: item.nota }).map((_, i) => <Star key={i} className="h-3.5 w-3.5 fill-terracotta text-terracotta" />)}</div>
+              <p className="mt-2 text-[10px] uppercase tracking-[0.16em] text-ink/45">{item.autor} • {siteConfig.secoes.depoimentos.selo}</p>
+            </article>
           ))}
         </Reveal>
       </div>

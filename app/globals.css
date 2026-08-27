@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Paleta original da Danielle, refinada para a V3 */
   --color-rose: #c9527a;
   --color-rose-deep: #b03d63;
   --color-charcoal: #2e2a2b;
@@ -8,48 +9,27 @@
   --color-blush-light: #fdf6f7;
   --color-coral: #d2542f;
 
+  /* aliases usados pela estrutura premium da V2 */
+  --color-ink: #2e2a2b;
+  --color-cream: #fffaf9;
+  --color-sand: #f7e6ea;
+  --color-peach: #c9527a;
+  --color-terracotta: #b03d63;
+  --color-gold: #d6a0b3;
+
   --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; }
+html::-webkit-scrollbar { display: none; }
+body { margin: 0; background: #fff; color: var(--color-charcoal); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--color-blush); color: var(--color-charcoal); }
+:focus-visible { outline: 2px solid var(--color-rose-deep); outline-offset: 3px; border-radius: 4px; }
+.section-eyebrow { font-size: 0.69rem; line-height: 1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.22em; color: var(--color-rose-deep); }
+.noise-overlay { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E"); pointer-events: none; }
 
-body {
-  background-color: #ffffff;
-  color: var(--color-charcoal);
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Esconde a barra de rolagem nativa (Lenis já cuida da rolagem em si) */
-html {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar {
-  display: none;
-}
-
-/* Foco visível em toda a navegação por teclado — requisito de acessibilidade */
-:focus-visible {
-  outline: 2px solid var(--color-rose-deep);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-/* Quem pede menos movimento não recebe nem o smooth scroll nativo */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }

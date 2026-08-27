@@ -1,62 +1,33 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { FloralAccent } from "@/components/ui/FloralAccent";
-import { IconCircle } from "@/components/ui/IconCircle";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function ParaQuem() {
-  const { titulo, imagem, imagemAlt } = siteConfig.secoes.paraQuem;
-
   return (
-    <section
-      id="para-quem"
-      aria-labelledby="titulo-para-quem"
-      className="relative overflow-hidden bg-blush py-20 lg:py-24"
-    >
-      <FloralAccent className="-right-24 bottom-0 w-96 text-rose/20" />
-
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-[0_8px_30px_rgba(46,42,43,0.12)]">
-              <Image
-                src={imagem}
-                alt={imagemAlt}
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
+    <section id="atendimento" className="bg-cream py-24 lg:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
+        <div className="grid gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-20">
+          <Reveal className="lg:sticky lg:top-28">
+            <p className="section-eyebrow">Atendimento</p>
+            <h2 className="mt-5 font-display text-[clamp(2.7rem,5vw,5.4rem)] leading-[0.96] tracking-[-0.04em] text-ink">Um espaço para cada <span className="italic text-terracotta">fase e vínculo.</span></h2>
+            <div className="relative mt-9 aspect-[4/3] overflow-hidden rounded-[2rem]">
+              <Image src="/images/danielle-atendimento.jpg" alt="Danielle durante um atendimento psicológico" fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
             </div>
           </Reveal>
 
-          <div>
-            <Reveal>
-              <SectionTitle id="titulo-para-quem" align="left">
-                {titulo}
-              </SectionTitle>
-            </Reveal>
-
-            <Reveal
-              stagger
-              className="mt-10 grid gap-8 sm:grid-cols-2"
-            >
-              {siteConfig.publicos.map((item) => (
-                <div
-                  key={item.titulo}
-                  className="flex flex-col items-start gap-4"
-                >
-                  <IconCircle name={item.icone} />
-                  <h3 className="font-display text-xl text-charcoal">
-                    {item.titulo}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-charcoal/75">
-                    {item.descricao}
-                  </p>
+          <Reveal stagger className="border-t border-ink/15">
+            {siteConfig.publicos.map((item, index) => (
+              <article key={item.titulo} className="group grid grid-cols-[52px_1fr_auto] gap-4 border-b border-ink/15 py-8 sm:grid-cols-[72px_1fr_auto] sm:py-10">
+                <span className="font-display text-lg italic text-terracotta">0{index + 1}</span>
+                <div>
+                  <h3 className="font-display text-3xl tracking-[-0.03em] text-ink sm:text-4xl">{item.titulo}</h3>
+                  <p className="mt-3 max-w-lg text-sm leading-7 text-ink/58">{item.descricao}</p>
                 </div>
-              ))}
-            </Reveal>
-          </div>
+                <span className="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 transition-all group-hover:bg-ink group-hover:text-cream"><ArrowUpRight className="h-4 w-4" /></span>
+              </article>
+            ))}
+          </Reveal>
         </div>
       </div>
     </section>
