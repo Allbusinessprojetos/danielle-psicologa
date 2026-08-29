@@ -29,7 +29,7 @@ export function Hero() {
             <span className="block text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
   {hero.tituloDestaque}
 </span>
-            <span className="mt-1 block font-normal italic text-rose-deep sm:mt-2">{hero.tituloResto}</span>
+            <span className="mt-1 block font-normal italic text-rose-deep drop-shadow-[0_2px_10px_rgba(255,255,255,0.9)] sm:mt-2 sm:drop-shadow-none">{hero.tituloResto}</span>
           </h1>
 
           <p className="mt-6 max-w-xl border-l border-rose/45 pl-4 text-[0.95rem] leading-6 text-charcoal/75 sm:mt-10 sm:pl-7 sm:text-base sm:leading-8">

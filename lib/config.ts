@@ -35,6 +35,8 @@ const siteConfigBase = {
     email: "daniellerevitalle@gmail.com",
     instagram: "https://instagram.com/danipsicologiaclinica",
     instagramHandle: "@danipsicologiaclinica",
+    facebook: "https://web.facebook.com/danipsicoclinica",
+    facebookLabel: "Facebook",
     agendaOnline: "https://maapp.com.br/PsicoDani",
     agendaOnlineLabel: "Ver agenda online",
   },

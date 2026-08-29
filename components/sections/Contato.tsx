@@ -49,6 +49,18 @@ export function Contato() {
                     </span>
                     {contato.instagramHandle}
                   </a>
+                  <a href={contato.facebook} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2.5 text-sm text-white/80 transition-colors hover:text-white" aria-label={contato.facebookLabel}>
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-[9px] bg-[#1877F2] shadow-[0_6px_18px_rgba(24,119,242,.25)]">
+                      <svg
+  viewBox="0 0 24 24"
+  className="h-[18px] w-[18px] text-white"
+  fill="currentColor"
+>
+  <path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.58v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z" />
+</svg>
+                    </span>
+                    {contato.facebookLabel}
+                  </a>
                 </div>
               </div>
             </div>
