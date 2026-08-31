@@ -14,7 +14,7 @@ const siteConfigBase = {
     tituloResto: "é também reconstruir caminhos.",
     subtitulo:
       "Psicoterapia com acolhimento, experiência e base científica para adolescentes, adultos, casais e famílias.",
-    imagem: "/images/danielle-hero-final.png",
+    imagem: "/images/danielle-hero-polka.png",
     imagemAlt: "Danielle Saquetto Baruffi, psicóloga, em retrato profissional no consultório",
   },
 

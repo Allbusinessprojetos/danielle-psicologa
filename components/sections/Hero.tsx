@@ -16,11 +16,11 @@ export function Hero() {
         priority
         quality={96}
         sizes="100vw"
-        className="object-cover object-[50%_center] sm:object-[50%_center] lg:object-center"
+        className="object-cover object-[82%_center] sm:object-[66%_center] lg:object-center"
       />
 
       {/* Mobile: preserve Danielle's portrait visibility. Desktop keeps the premium left-to-right fade. */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(253,246,247,.16)_0%,rgba(253,246,247,.08)_30%,rgba(253,246,247,.42)_64%,rgba(253,246,247,.94)_100%)] sm:bg-gradient-to-t sm:from-blush-light/95 sm:via-blush-light/40 sm:to-transparent lg:bg-gradient-to-r lg:from-blush-light lg:from-0% lg:via-blush-light/92 lg:via-34% lg:to-transparent lg:to-70%" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(253,246,247,.28)_0%,rgba(253,246,247,.38)_28%,rgba(253,246,247,.7)_58%,rgba(253,246,247,.96)_100%)] sm:bg-gradient-to-t sm:from-blush-light/95 sm:via-blush-light/40 sm:to-transparent lg:bg-gradient-to-r lg:from-blush-light lg:from-0% lg:via-blush-light/92 lg:via-34% lg:to-transparent lg:to-70%" />
       <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent sm:from-white/20" />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-[1440px] items-end px-5 pb-8 pt-24 sm:px-8 sm:pb-12 sm:pt-28 lg:items-center lg:px-12 lg:pb-0 xl:px-16">
