@@ -16,7 +16,7 @@ export function Hero() {
         priority
         quality={96}
         sizes="100vw"
-        className="object-cover object-[82%_center] sm:object-[66%_center] lg:object-center"
+        className="object-cover object-[60%_center] sm:object-[55%_center] lg:object-center"
       />
 
       {/* Mobile: preserve Danielle's portrait visibility. Desktop keeps the premium left-to-right fade. */}

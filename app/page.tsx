@@ -6,6 +6,7 @@ import { Depoimentos } from "@/components/sections/Depoimentos";
 import { Especialidades } from "@/components/sections/Especialidades";
 import { Espaco } from "@/components/sections/Espaco";
 import { Hero } from "@/components/sections/Hero";
+import { Palestras } from "@/components/sections/Palestras";
 import { ParaQuem } from "@/components/sections/ParaQuem";
 import { Sobre } from "@/components/sections/Sobre";
 import { Trajetoria } from "@/components/sections/Trajetoria";
@@ -21,6 +22,7 @@ export default function Home() {
         <Sobre />
         <Especialidades />
         <Trajetoria />
+        <Palestras />
         <ParaQuem />
         <Espaco />
         {siteConfig.secoes.depoimentos.ativo && <Depoimentos />}

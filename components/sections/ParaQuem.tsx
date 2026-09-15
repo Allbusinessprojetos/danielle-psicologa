@@ -12,7 +12,7 @@ export function ParaQuem() {
             <p className="section-eyebrow">Atendimento</p>
             <h2 className="mt-5 font-display text-[clamp(2.7rem,5vw,5.4rem)] leading-[0.96] tracking-[-0.04em] text-ink">Um espaço para cada <span className="italic text-terracotta">fase e vínculo.</span></h2>
             <div className="relative mt-9 aspect-[4/3] overflow-hidden rounded-[2rem]">
-              <Image src="/images/danielle-atendimento.jpg" alt="Danielle durante um atendimento psicológico" fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
+              <Image src="/images/danielle-atendimento-00.jpeg" alt="Danielle durante um atendimento psicológico" fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
             </div>
           </Reveal>
 

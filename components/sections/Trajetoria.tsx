@@ -32,7 +32,7 @@ export function Trajetoria() {
           <div className="space-y-8 lg:sticky lg:top-28 lg:self-start">
             <Reveal>
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-                <Image src="/images/danielle-editorial.jpg" alt="Danielle Saquetto Baruffi em retrato profissional" fill sizes="(min-width: 1024px) 38vw, 100vw" className="object-cover object-top" />
+                <Image src="/images/danielle-trajetoria-00.jpeg" alt="Danielle Saquetto Baruffi em retrato profissional" fill sizes="(min-width: 1024px) 38vw, 100vw" className="object-cover object-top" />
               </div>
             </Reveal>
             <Reveal className="rounded-[1.75rem] bg-cream p-7 sm:p-9">

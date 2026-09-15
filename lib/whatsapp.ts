@@ -23,3 +23,12 @@ export function whatsappHref(): string {
     siteConfig.contato.agendaOnline,
   );
 }
+
+/** Variante com mensagem customizada, para CTAs de contexto específico (ex: palestras). */
+export function whatsappHrefComMensagem(mensagem: string): string {
+  return buildWhatsAppLink(
+    siteConfig.contato.whatsapp,
+    mensagem,
+    siteConfig.contato.agendaOnline,
+  );
+}
