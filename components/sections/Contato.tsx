@@ -67,7 +67,7 @@ export function Contato() {
           </Reveal>
 
           <div className="relative min-h-[520px] lg:min-h-full">
-            <Image src="/images/danielle-retrato.jpg" alt="Retrato profissional de Danielle Saquetto Baruffi" fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover object-top" />
+            <Image src="/images/danielle-contato-03.jpeg" alt="Retrato profissional de Danielle Saquetto Baruffi" fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover object-top" />
             <div className="absolute inset-x-5 bottom-5 rounded-[1.4rem] border border-white/20 bg-charcoal/75 p-5 backdrop-blur-md sm:inset-x-7 sm:bottom-7 sm:p-6">
               <div className="flex items-start gap-4"><CalendarDays className="mt-0.5 h-5 w-5 shrink-0 text-[#e3aec0]" /><div><p className="text-xs uppercase tracking-[0.16em] text-white/50">Horários</p><div className="mt-3 grid grid-cols-2 gap-x-5 gap-y-2">{horarios.map((item) => <div key={item.dia} className="text-xs text-white/75"><span className="block text-white">{item.dia.replace('-feira','')}</span>{item.situacao}</div>)}</div></div></div>
             </div>

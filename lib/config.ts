@@ -14,7 +14,8 @@ const siteConfigBase = {
     tituloResto: "é também reconstruir caminhos.",
     subtitulo:
       "Psicoterapia com acolhimento, experiência e base científica para adolescentes, adultos, casais e famílias.",
-    imagem: "/images/danielle-hero-00.jpeg",
+    imagem: "/images/danielle-hero-02.jpeg",
+    imagemDesktop: "/images/danielle-hero-desktop-v2.jpeg",
     imagemAlt: "Danielle Saquetto Baruffi, psicóloga, em retrato profissional no consultório",
   },
 
@@ -25,7 +26,7 @@ const siteConfigBase = {
       "Há mais de 20 anos, acompanho pessoas em diferentes momentos da vida. Minha prática une escuta sensível, ética e conhecimento científico para compreender não apenas sintomas, mas também histórias, vínculos e contextos.",
     destaque:
       "A psicoterapia pode ser um espaço para compreender o que pesa, reconhecer recursos e construir mudanças possíveis — no seu tempo.",
-    imagem: "/images/danielle-sobre-00.jpeg",
+    imagem: "/images/danielle-sobre-01.jpeg",
     imagemAlt: "Danielle Saquetto Baruffi sorrindo em retrato profissional",
   },
 
@@ -86,7 +87,7 @@ const siteConfigBase = {
     titulo: "Saúde mental em igrejas, escolas e comunidades.",
     texto:
       "Além do consultório, participo de palestras sobre saúde mental — com destaque para convites de igrejas, geralmente para grupos de mulheres, e de escolas, para conversar com adolescentes do ensino médio.",
-    temas: ["Ansiedade e manejo da ansiedade", "Depressão e Setembro Amarelo", "Saúde mental para o público feminino", "Saúde mental na adolescência"],
+    temas: ["Ansiedade e manejo da ansiedade", "Depressão e Setembro Amarelo", "Saúde mental para o público feminino", "Saúde mental na adolescência", "Relacionamentos e casais", "Orientação parental (pais e filhos)"],
     publicos: ["Igrejas", "Escolas", "Grupos de mulheres"],
     ctaLabel: "Solicitar uma palestra",
     ctaMensagem: "Olá, Danielle! Gostaria de solicitar uma palestra para minha igreja/escola/instituição.",

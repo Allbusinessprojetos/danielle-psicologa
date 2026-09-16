@@ -16,8 +16,20 @@ export function Hero() {
         priority
         quality={96}
         sizes="100vw"
-        className="object-cover object-[60%_center] sm:object-[55%_center] lg:object-center"
+        className="object-cover object-center lg:hidden"
       />
+      <div className="absolute inset-y-0 right-0 hidden w-[46%] lg:block">
+        <Image
+          src={hero.imagemDesktop}
+          alt={hero.imagemAlt}
+          fill
+          priority
+          quality={96}
+          sizes="46vw"
+          className="object-cover object-[center_20%]"
+        />
+        <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-blush-light to-transparent" />
+      </div>
 
       {/* Mobile: preserve Danielle's portrait visibility. Desktop keeps the premium left-to-right fade. */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(253,246,247,.28)_0%,rgba(253,246,247,.38)_28%,rgba(253,246,247,.7)_58%,rgba(253,246,247,.96)_100%)] sm:bg-gradient-to-t sm:from-blush-light/95 sm:via-blush-light/40 sm:to-transparent lg:bg-gradient-to-r lg:from-blush-light lg:from-0% lg:via-blush-light/92 lg:via-34% lg:to-transparent lg:to-70%" />
