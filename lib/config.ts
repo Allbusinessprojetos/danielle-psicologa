@@ -132,7 +132,7 @@ const siteConfigBase = {
   },
 
   seo: {
-    url: "https://danielle-psicologa.netlify.app",
+    url: "https://psidaniellerevitalle.com.br",
     titulo: "Danielle Saquetto Baruffi — Psicóloga em Jales/SP | CRP 06/83220",
     descricao: "Psicoterapia com acolhimento, experiência e base científica. Atendimento em TCC para adolescentes, adultos, casais e famílias em Jales/SP, presencial e online.",
     ogImage: "/images/danielle-og.jpg",
